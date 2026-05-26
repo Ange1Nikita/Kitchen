@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Кухня Calliope (фабричная) — LeCucine</title>
+
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800,900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../shared/styles/base.css" />
+  <link rel="stylesheet" href="../../shared/styles/header.css" />
+  <link rel="stylesheet" href="../../shared/styles/footer.css" />
+  <link rel="stylesheet" href="../../shared/styles/mobile-menu.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header__inner">
+        <div class="site-header__brand">
+          <a href="/" class="site-header__logo">LECUCINE<sup>®</sup></a>
+          <nav class="site-header__nav" aria-label="Главная навигация">
+            <div class="site-header__top">
+              <a href="/about">О компании</a>
+              <a href="/delivery">Заказ и доставка</a>
+              <a href="/partners">Партнерство</a>
+              <a href="/novosti">Новости</a>
+              <a href="/sovety">Советы</a>
+            </div>
+            <div class="site-header__main">
+              <a href="/kuhni" class="active">Кухни</a>
+              <a href="/v-nalichii">В наличии</a>
+              <a href="/raboty">Работы</a>
+              <a href="/fabriki">Фабрики</a>
+              <a href="/mebel">Мебель</a>
+              <a href="/kontakty">Контакты</a>
+            </div>
+          </nav>
+        </div>
+        <div class="site-header__aside">
+          <div class="site-header__address">Москва, Дербеневская наб. 7 с 3</div>
+          <div class="site-header__phone-row">
+            <a href="tel:+74955324212" class="site-header__phone">+7 495 532 42 12</a>
+            <button class="site-header__search" aria-label="Поиск">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7" /><line x1="20" y1="20" x2="16.65" y2="16.65" /></svg>
+            </button>
+          </div>
+        </div>
+        <button class="site-header__burger" aria-label="Открыть меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- ===== Top: back + breadcrumbs ===== -->
+      <div class="fproduct-top">
+        <a href="/kuhni" class="fproduct-top__back" aria-label="Назад">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+          </svg>
+        </a>
+        <nav class="fproduct-top__crumbs" aria-label="Хлебные крошки">
+          <a href="/">LeCucine</a><span class="sep">–</span>
+          <a href="/kuhni">Все кухни</a><span class="sep">–</span>
+          <a href="/kuhni/sovremennye">Современные кухни</a><span class="sep">–</span>
+          <span class="current">Кухня Calliope</span>
+        </nav>
+      </div>
+
+      <!-- ===== Main: 542 info + 770 gallery ===== -->
+      <section class="fproduct-main">
+
+        <!-- LEFT — info -->
+        <div class="fproduct-info">
+
+          <!-- Details (gap 40) -->
+          <div class="fproduct-details">
+
+            <!-- Title row (542w): text 428 + brand-logo 86 -->
+            <div class="fproduct-title">
+              <div class="fproduct-title__text">
+                <div class="fproduct-title__text-inner">
+                  <h1 class="fproduct-title__name">Кухня Calliope</h1>
+                  <div class="fproduct-title__price-row">
+                    <span class="fproduct-title__price-prefix">от</span>
+                    <span class="fproduct-title__price-value">475 000 ₽</span>
+                    <span class="fproduct-title__price-suffix">за м.п.</span>
+                  </div>
+                </div>
+                <span class="fproduct-title__dealer">
+                  <svg class="fproduct-title__dealer-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 1.6 9.7 2.6l1.9-.4 1.1 1.6 1.7.9-.4 1.9 1 1.7-1 1.7.4 1.9-1.7.9-1.1 1.6-1.9-.4L8 14.4l-1.7-1-1.9.4-1.1-1.6-1.7-.9.4-1.9-1-1.7 1-1.7-.4-1.9 1.7-.9L4.4 2.2l1.9.4L8 1.6z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                    <path d="m5.6 8 1.6 1.6 3.2-3.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Официальный дилер
+                </span>
+              </div>
+              <a href="/fabriki/antonio-baston" class="fproduct-title__brand-logo" aria-label="Antonio Baston">
+                <img src="../../assets/figma-product/brand-logo.png" alt="Antonio Baston" />
+              </a>
+            </div>
+
+            <!-- Description -->
+            <section class="fproduct-section">
+              <div class="fproduct-section__title">Описание</div>
+              <div class="fproduct-section__body">
+                <p>Кухня Calliope — это настоящее произведение искусства, сочетающее в себе роскошь и функциональность. Его фасад из непреходящего мрамора Nero Antico придает острову элегантный шарм, в то время как столешница из стали Vintage придает ему характерную износостойкость.</p>
+                <p>Черные глянцевые лакированные базовые блоки и стальные базовые блоки Vintage обрамляют остров, придавая ему современный стиль и прочность. Двери с колоннами из жидкой стали Aluminium 03 по бокам создают впечатление надежной защиты, а мраморная отделка Zimbabwe Black на задней стороне добавляет нотку роскоши и утонченности. Этот кухонный остров - не просто элемент интерьера, это произведение искусства, которое сделает вашу кухню настоящим центром внимания и комфорта.</p>
+              </div>
+            </section>
+
+            <!-- CTA -->
+            <button class="fproduct-cta" type="button">Хочу уточнить цену</button>
+
+            <!-- Characteristics -->
+            <section class="fproduct-specs">
+              <div class="fproduct-specs__title">Характеристики</div>
+
+              <div class="fproduct-specs__row fproduct-specs__row--tags">
+                <span class="fproduct-specs__label">Стиль</span>
+                <div class="fproduct-specs__tags">
+                  <span class="fproduct-chip">Современный</span>
+                  <span class="fproduct-chip">Классический</span>
+                </div>
+              </div>
+
+              <div class="fproduct-specs__row fproduct-specs__row--tags">
+                <span class="fproduct-specs__label">Отделка</span>
+                <div class="fproduct-specs__tags">
+                  <span class="fproduct-chip">С ручками</span>
+                  <span class="fproduct-chip">Без ручек</span>
+                  <span class="fproduct-chip">Со стеклом</span>
+                </div>
+              </div>
+
+              <div class="fproduct-specs__row fproduct-specs__row--tags">
+                <span class="fproduct-specs__label">Материал</span>
+                <div class="fproduct-specs__tags">
+                  <span class="fproduct-chip">Матовая покраска</span>
+                  <span class="fproduct-chip">Мрамор</span>
+                </div>
+              </div>
+
+              <div class="fproduct-specs__row fproduct-specs__row--tags">
+                <span class="fproduct-specs__label">Цвет</span>
+                <div class="fproduct-specs__tags">
+                  <span class="fproduct-chip">
+                    <span class="fproduct-chip__swatch" style="background:#705a45"></span>
+                    Коричневый
+                  </span>
+                </div>
+              </div>
+
+              <div class="fproduct-specs__row fproduct-specs__row--tags">
+                <span class="fproduct-specs__label">Форма</span>
+                <div class="fproduct-specs__tags">
+                  <span class="fproduct-chip">С островом</span>
+                  <span class="fproduct-chip">Прямая</span>
+                </div>
+              </div>
+
+              <div class="fproduct-specs__row">
+                <span class="fproduct-specs__label">Изготовление</span>
+                <span class="fproduct-specs__value">45-60 дней</span>
+              </div>
+
+              <div class="fproduct-specs__row">
+                <span class="fproduct-specs__label">Доставка</span>
+                <span class="fproduct-specs__value">2-3 недели</span>
+              </div>
+            </section>
+          </div>
+
+          <!-- Advantages (accordion) -->
+          <section class="fproduct-advantages">
+            <h2 class="fproduct-advantages__title">Преимущества работы с нами</h2>
+            <div class="fproduct-advantages__list">
+
+              <article class="advantage advantage--open">
+                <div class="advantage__icon">
+                  <img src="../../assets/figma-product/icon-project.svg" alt="" />
+                </div>
+                <div class="advantage__text">
+                  <div class="advantage__head">
+                    <h3 class="advantage__title">Огромный опыт проектирования кухонь любой сложности</h3>
+                    <button class="advantage__toggle" type="button" aria-label="Развернуть">
+                      <svg class="advantage__toggle-icon advantage__toggle-icon--minus" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                      <svg class="advantage__toggle-icon advantage__toggle-icon--plus" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><line x1="12" y1="5" x2="12" y2="19"/></svg>
+                    </button>
+                  </div>
+                  <div class="advantage__body">
+                    Не тратьте время на поиск фабрики. С нашим 15-летним опытом мы подберём оптимального производителя, который реализует вашу кухню мечты без переплат и компромиссов по качеству.
+                  </div>
+                </div>
+              </article>
+
+              <article class="advantage">
+                <div class="advantage__icon">
+                  <img src="../../assets/figma-product/icon-support.svg" alt="" />
+                </div>
+                <div class="advantage__text">
+                  <div class="advantage__head">
+                    <h3 class="advantage__title">Суперкомпетентные менеджеры</h3>
+                    <button class="advantage__toggle" type="button" aria-label="Развернуть">
+                      <svg class="advantage__toggle-icon advantage__toggle-icon--minus" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                      <svg class="advantage__toggle-icon advantage__toggle-icon--plus" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><line x1="12" y1="5" x2="12" y2="19"/></svg>
+                    </button>
+                  </div>
+                  <div class="advantage__body">
+                    Каждый менеджер прошёл обучение на итальянских фабриках и знает продукт досконально — от особенностей фурнитуры до тонкостей доставки.
+                  </div>
+                </div>
+              </article>
+
+              <article class="advantage">
+                <div class="advantage__icon">
+                  <img src="../../assets/figma-product/icon-info.svg" alt="" />
+                </div>
+                <div class="advantage__text">
+                  <div class="advantage__head">
+                    <h3 class="advantage__title">Всегда актуальная информация о продукции</h3>
+                    <button class="advantage__toggle" type="button" aria-label="Развернуть">
+                      <svg class="advantage__toggle-icon advantage__toggle-icon--minus" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                      <svg class="advantage__toggle-icon advantage__toggle-icon--plus" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><line x1="12" y1="5" x2="12" y2="19"/></svg>
+                    </button>
+                  </div>
+                  <div class="advantage__body">
+                    Мы ежемесячно обновляем каталоги и цены — никаких неприятных сюрпризов на стадии заказа или поставки.
+                  </div>
+                </div>
+              </article>
+
+              <article class="advantage">
+                <div class="advantage__icon">
+                  <img src="../../assets/figma-product/icon-range.svg" alt="" />
+                </div>
+                <div class="advantage__text">
+                  <div class="advantage__head">
+                    <h3 class="advantage__title">Огромный выбор современной бытовой техники и аксессуаров</h3>
+                    <button class="advantage__toggle" type="button" aria-label="Развернуть">
+                      <svg class="advantage__toggle-icon advantage__toggle-icon--minus" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                      <svg class="advantage__toggle-icon advantage__toggle-icon--plus" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><line x1="12" y1="5" x2="12" y2="19"/></svg>
+                    </button>
+                  </div>
+                  <div class="advantage__body">
+                    Smeg, Miele, Bosch, Gaggenau, Asko — подберём технику под любой бюджет и стиль интерьера.
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <button class="fproduct-advantages__more" type="button">Показать еще</button>
+          </section>
+
+        </div>
+
+        <!-- RIGHT — gallery 770w stack (3 photos + show more) -->
+        <div class="fproduct-gallery">
+          <div class="fproduct-gallery__main">
+            <img class="fproduct-gallery__img" src="../../assets/figma-product/gallery-1.jpg" alt="Кухня Calliope — фото 1" />
+            <a href="/raboty/1" class="fproduct-gallery__widget">
+              <img class="fproduct-gallery__widget-preview" src="../../assets/figma-product/preview.jpg" alt="" />
+              <span class="fproduct-gallery__widget-text">Выполненный проект c кухней <strong>Calliope</strong></span>
+            </a>
+          </div>
+          <div class="fproduct-gallery__main">
+            <img class="fproduct-gallery__img" src="../../assets/figma-product/gallery-2.jpg" alt="Кухня Calliope — фото 2" />
+          </div>
+          <div class="fproduct-gallery__main">
+            <img class="fproduct-gallery__img" src="../../assets/figma-product/gallery-3.jpg" alt="Кухня Calliope — фото 3" />
+          </div>
+          <button class="fproduct-gallery__more" type="button">Показать ещё</button>
+        </div>
+
+      </section>
+
+      <!-- ===== Related kitchens (same factory) — 3 col ===== -->
+      <section class="related related--products">
+        <div class="related__header">
+          <h2 class="related__title">Другие кухни фабрики Antonio Baston</h2>
+          <a href="/fabriki/antonio-baston" class="related__link">Каталог похожих кухонь</a>
+        </div>
+        <div class="related__grid related__grid--3">
+          <article class="related-card">
+            <div class="related-card__img-wrap">
+              <img class="related-card__img" src="../../assets/figma-product/related-1.jpg" alt="" />
+            </div>
+            <div class="related-card__body">
+              <div class="related-card__name">Кухня Demetra</div>
+              <div class="related-card__brand">Antonio Baston</div>
+              <div class="related-card__price">3 160 000 ₽</div>
+            </div>
+          </article>
+          <article class="related-card">
+            <div class="related-card__img-wrap">
+              <img class="related-card__img" src="../../assets/figma-product/related-2.jpg" alt="" />
+            </div>
+            <div class="related-card__body">
+              <div class="related-card__name">Кухня Area</div>
+              <div class="related-card__brand">Antonio Baston</div>
+              <div class="related-card__price">2 260 000 ₽</div>
+            </div>
+          </article>
+          <article class="related-card">
+            <div class="related-card__img-wrap">
+              <img class="related-card__img" src="../../assets/figma-product/related-3.jpg" alt="" />
+            </div>
+            <div class="related-card__body">
+              <div class="related-card__name">Кухня Iside</div>
+              <div class="related-card__brand">Antonio Baston</div>
+              <div class="related-card__price">3 700 000 ₽</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== Completed projects (6 cards: 3×2) — Figma 1:1519 ===== -->
+      <section class="related related--projects">
+        <div class="related__header">
+          <h2 class="related__title">Выполненные проекты</h2>
+          <a href="/raboty" class="related__link">Все проекты</a>
+        </div>
+        <div class="related__grid related__grid--3">
+          <article class="project-card">
+            <a href="/raboty/1" class="project-card__media project-card__media--tall">
+              <img class="project-card__img" src="../../assets/figma-product/related-1.jpg" alt="" />
+              <span class="project-card__brand"><img src="../../assets/figma-product/brand-logo.png" alt="Antonio Baston" /></span>
+            </a>
+            <div class="project-card__body">
+              <div class="project-card__date">23 марта 2026</div>
+              <a href="/raboty/1" class="project-card__title">ЖК Садовые Кварталы - Everyday Magic Project</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <a href="/raboty/2" class="project-card__media">
+              <img class="project-card__img" src="../../assets/figma-product/related-2.jpg" alt="" />
+              <span class="project-card__brand"><img src="../../assets/figma-product/brand-logo.png" alt="Antonio Baston" /></span>
+            </a>
+            <div class="project-card__body">
+              <div class="project-card__date">22 февраля 2026</div>
+              <a href="/raboty/2" class="project-card__title">ЖК Knight Bridge - Glamour</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <a href="/raboty/3" class="project-card__media">
+              <img class="project-card__img" src="../../assets/figma-product/related-3.jpg" alt="" />
+              <span class="project-card__brand"><img src="../../assets/figma-product/brand-logo.png" alt="Antonio Baston" /></span>
+            </a>
+            <div class="project-card__body">
+              <div class="project-card__date">1 февраля 2026</div>
+              <a href="/raboty/3" class="project-card__title">Кухня Brocant</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <a href="/raboty/4" class="project-card__media project-card__media--tall">
+              <img class="project-card__img" src="../../assets/figma-product/related-1.jpg" alt="" />
+              <span class="project-card__brand"><img src="../../assets/figma-product/brand-logo.png" alt="Antonio Baston" /></span>
+            </a>
+            <div class="project-card__body">
+              <div class="project-card__date">23 марта 2026</div>
+              <a href="/raboty/4" class="project-card__title">ЖК Садовые Кварталы - Everyday Magic Project</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <a href="/raboty/5" class="project-card__media">
+              <img class="project-card__img" src="../../assets/figma-product/related-2.jpg" alt="" />
+              <span class="project-card__brand"><img src="../../assets/figma-product/brand-logo.png" alt="Antonio Baston" /></span>
+            </a>
+            <div class="project-card__body">
+              <div class="project-card__date">22 февраля 2026</div>
+              <a href="/raboty/5" class="project-card__title">ЖК Knight Bridge - Glamour</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <a href="/raboty/6" class="project-card__media">
+              <img class="project-card__img" src="../../assets/figma-product/related-3.jpg" alt="" />
+              <span class="project-card__brand"><img src="../../assets/figma-product/brand-logo.png" alt="Antonio Baston" /></span>
+            </a>
+            <div class="project-card__body">
+              <div class="project-card__date">1 февраля 2026</div>
+              <a href="/raboty/6" class="project-card__title">Кухня Brocant</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== Appliance brands (6) — Figma 1:1489 ===== -->
+      <section class="related related--brands">
+        <div class="related__header">
+          <h2 class="related__title">Подберите технику для кухни</h2>
+          <a href="/tehnika" class="related__link">Все фабрики</a>
+        </div>
+        <div class="brand-grid">
+          <div class="brand-card">
+            <div class="brand-card__logo"><img src="../../assets/figma-product/logo-bertazzoni.png" alt="Bertazzoni" /></div>
+            <span class="brand-card__name">Bertazzoni</span>
+          </div>
+          <div class="brand-card">
+            <div class="brand-card__logo"><img src="../../assets/figma-product/logo-elica.png" alt="Elica" /></div>
+            <span class="brand-card__name">Elica</span>
+          </div>
+          <div class="brand-card">
+            <div class="brand-card__logo"><img src="../../assets/figma-product/logo-dedietrich.png" alt="De Dietrich" /></div>
+            <span class="brand-card__name">De Dietrich</span>
+          </div>
+          <div class="brand-card">
+            <div class="brand-card__logo"><img src="../../assets/figma-product/logo-gaggenau.png" alt="Gaggenau" /></div>
+            <span class="brand-card__name">Gaggenau</span>
+          </div>
+          <div class="brand-card">
+            <div class="brand-card__logo"><img src="../../assets/figma-product/logo-jura.png" alt="Jura" /></div>
+            <span class="brand-card__name">Jura</span>
+          </div>
+          <div class="brand-card">
+            <div class="brand-card__logo"><img src="../../assets/figma-product/logo-kitchenaid.png" alt="KitchenAid" /></div>
+            <span class="brand-card__name">KitchenAid</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <div class="site-footer__logo">LeCucine<sup>®</sup>2021</div>
+          <div class="site-footer__socials">
+            <a href="#" class="site-footer__social" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
+            </a>
+            <a href="#" class="site-footer__social" aria-label="ВКонтакте">VK</a>
+            <a href="#" class="site-footer__social" aria-label="Facebook">F</a>
+          </div>
+        </div>
+        <div class="site-footer__contacts">
+          <a href="tel:+74955324212">+7 495 532 42 12</a>
+          <a href="mailto:hello@lecucine.ru">hello@lecucine.ru</a>
+          <div class="site-footer__address">Москва, Дербеневская наб. 7 с 3</div>
+        </div>
+        <nav class="site-footer__nav" aria-label="Подвал — навигация">
+          <a href="/kuhni">Кухни</a>
+          <a href="/about">О компании</a>
+          <a href="/novosti">Новости</a>
+          <a href="/v-nalichii">В наличии</a>
+          <a href="/delivery">Заказ и доставка</a>
+          <a href="/sovety">Советы</a>
+          <a href="/raboty">Работы</a>
+          <a href="/partners">Партнерство</a>
+          <a href="/mebel">Мебель</a>
+          <a href="/fabriki">Фабрики</a>
+          <a href="/kontakty">Контакты</a>
+          <a href="/tehnika">Техника</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.advantage__head').forEach(head => {
+      head.addEventListener('click', () => {
+        head.closest('.advantage').classList.toggle('advantage--open');
+      });
+    });
+  </script>
+  <script src="../../shared/scripts/mobile-menu.js" defer></script>
+</body>
+</html>

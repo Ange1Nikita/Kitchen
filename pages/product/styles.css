@@ -1,0 +1,724 @@
+/* ===== Page: Product (Кухня Calliope — factory model) =====
+   Figma node 1:1366 — 1 к 1
+   Main: Info 542w + Gallery 770w (gap 32)
+   Info gap 80 (Details / Advantages)
+   Details gap 40 (Title → Description → CTA → Specs)
+   Title 542w: Text 428w (name 40 / price row / dealer pill) + 86×86 brand logo
+   Specs: 7 rows, label 108w + chip tags / simple value, 12 padding chips bg #282828 radius 8
+   Цвет row: chip with 20×20 swatch + name
+   Advantages: list items 84×84 icon + text 417w (title 20 + plus/minus 24×24, body 14 muted)
+   Gallery: 770×479 ×3 stacked, gap 12, widget 302×76 top-right on first
+   Brand grid: 6 cards 200×177, inner 176×120 white box with 152×96 logo
+*/
+
+/* --- Top: back + breadcrumbs --- */
+.fproduct-top {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.fproduct-top__back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  transition: background 0.15s ease;
+}
+.fproduct-top__back:hover { background: rgba(255, 255, 255, 0.08); }
+
+.fproduct-top__crumbs {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+.fproduct-top__crumbs a { color: rgba(255, 255, 255, 0.5); transition: color 0.15s ease; }
+.fproduct-top__crumbs a:hover { color: #fff; }
+.fproduct-top__crumbs .sep { margin: 0 8px; }
+.fproduct-top__crumbs .current {
+  color: #fff;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+/* --- Main grid: 542 info + 770 gallery --- */
+.fproduct-main {
+  display: grid;
+  grid-template-columns: 542px 1fr;
+  gap: 32px;
+  padding: 32px 0 80px;
+}
+
+.fproduct-info {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.fproduct-details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* === Title row === */
+.fproduct-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  width: 100%;
+}
+
+.fproduct-title__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.fproduct-title__text-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.fproduct-title__name {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.fproduct-title__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.fproduct-title__price-prefix,
+.fproduct-title__price-suffix {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.fproduct-title__price-value {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.fproduct-title__dealer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #ff390e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  border-radius: 4px;
+}
+.fproduct-title__dealer-icon { flex-shrink: 0; }
+
+/* 86×86 white box, padding 4, image cover */
+.fproduct-title__brand-logo {
+  width: 86px;
+  height: 86px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px;
+  overflow: hidden;
+  display: block;
+}
+.fproduct-title__brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+/* === Section (Description) === */
+.fproduct-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.fproduct-section__title {
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.fproduct-section__body {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+}
+.fproduct-section__body p { margin: 0; }
+.fproduct-section__body p + p { margin-top: 8px; }
+
+/* === CTA button === */
+.fproduct-cta {
+  width: 100%;
+  height: 56px;
+  background: #ff390e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.fproduct-cta:hover { background: #e63110; }
+.fproduct-cta:active { transform: translateY(1px); }
+
+/* === Specs === */
+.fproduct-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.fproduct-specs__title {
+  width: 100%;
+  padding-bottom: 12px;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.fproduct-specs__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.fproduct-specs__row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.fproduct-specs__row--tags { align-items: flex-start; }
+
+.fproduct-specs__label {
+  flex: 0 0 108px;
+  padding-top: 6px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.fproduct-specs__value {
+  color: #fff;
+  padding-top: 6px;
+}
+
+.fproduct-specs__tags {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fproduct-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #282828;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 8px;
+}
+
+.fproduct-chip__swatch {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* === Advantages === */
+.fproduct-advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.fproduct-advantages__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.fproduct-advantages__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.advantage {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.advantage__icon {
+  width: 84px;
+  height: 84px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.advantage__icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.advantage__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.advantage__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  cursor: pointer;
+}
+
+.advantage__title {
+  margin: 0;
+  flex: 1 1 auto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.advantage__toggle {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.advantage__toggle-icon { display: none; }
+.advantage .advantage__toggle-icon--plus { display: block; }
+.advantage--open .advantage__toggle-icon--plus { display: none; }
+.advantage--open .advantage__toggle-icon--minus { display: block; }
+
+.advantage__body {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+  opacity: 0.5;
+  height: 63px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.advantage--open .advantage__body {
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.fproduct-advantages__more {
+  width: 100%;
+  height: 56px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.fproduct-advantages__more:hover { background: rgba(255, 255, 255, 0.08); }
+
+/* === Gallery (right column) === */
+.fproduct-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: start;
+}
+
+.fproduct-gallery__main {
+  position: relative;
+  aspect-ratio: 770 / 479;
+  background: #282828;
+  overflow: hidden;
+}
+.fproduct-gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fproduct-gallery__widget {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 16px 8px 8px;
+  background: #fff;
+  border-radius: 8px;
+  width: 302px;
+  color: #4c4c4c;
+  text-decoration: none;
+  z-index: 2;
+  transition: opacity 0.15s ease;
+}
+.fproduct-gallery__widget:hover { opacity: 0.92; }
+
+.fproduct-gallery__widget-preview {
+  width: 97px;
+  height: 60px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.fproduct-gallery__widget-text {
+  font-size: 14px;
+  line-height: 1.5;
+  width: 173px;
+}
+.fproduct-gallery__widget-text strong {
+  font-weight: 500;
+  color: #000;
+}
+
+.fproduct-gallery__more {
+  width: 100%;
+  height: 56px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.fproduct-gallery__more:hover { background: rgba(255, 255, 255, 0.08); }
+
+/* === Related sections === */
+.related {
+  padding: 56px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.related--products {
+  padding-bottom: 80px;
+  border-top: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.related--brands { padding-bottom: 80px; }
+
+.related__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.related__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.related__link {
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+  transition: color 0.15s ease;
+}
+.related__link:hover { color: #fff; }
+
+.related__grid {
+  display: grid;
+  gap: 32px 28px;
+}
+.related__grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+/* === Related kitchen card === */
+.related-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.25s ease;
+}
+.related-card:hover { transform: translateY(-2px); }
+
+.related-card__img-wrap {
+  aspect-ratio: 428 / 270;
+  background: #282828;
+  overflow: hidden;
+}
+.related-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.related-card:hover .related-card__img { transform: scale(1.02); }
+
+.related-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.related-card__name {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+}
+.related-card__brand {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+.related-card__price {
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* === Project card === */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.25s ease;
+}
+.project-card:hover { transform: translateY(-2px); }
+
+.project-card__media {
+  position: relative;
+  display: block;
+  aspect-ratio: 428 / 287;
+  overflow: hidden;
+  background: #282828;
+}
+.project-card__media--tall { aspect-ratio: 428 / 311; }
+
+.project-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.project-card:hover .project-card__img { transform: scale(1.02); }
+
+.project-card__brand {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  width: 123px;
+  height: 56px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 4px;
+  z-index: 2;
+  overflow: hidden;
+  display: block;
+}
+.project-card__brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-card__date {
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.project-card__title {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.project-card__title:hover { color: rgba(255, 255, 255, 0.8); }
+
+/* === Brand grid (6 appliance brands) === */
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 28px;
+}
+
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #282828;
+}
+
+.brand-card__logo {
+  width: 100%;
+  height: 120px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  overflow: hidden;
+}
+.brand-card__logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-card__name {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+}
+
+/* === Tablet === */
+@media (max-width: 1279px) {
+  .fproduct-main { grid-template-columns: 460px 1fr; }
+  .brand-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 1023px) {
+  .fproduct-main { grid-template-columns: 1fr; gap: 24px; padding-bottom: 56px; }
+  .fproduct-info { gap: 56px; }
+  .related__grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .related__title { font-size: 24px; }
+  .brand-grid { grid-template-columns: repeat(3, 1fr); }
+  .advantage { gap: 24px; }
+  .advantage__icon { width: 64px; height: 64px; }
+}
+
+/* === Mobile === */
+@media (max-width: 639px) {
+  .fproduct-top { padding: 16px 0; }
+  .fproduct-title__name { font-size: 28px; }
+  .fproduct-title { gap: 16px; }
+  .fproduct-title__brand-logo { width: 64px; height: 64px; }
+  .fproduct-advantages__title { font-size: 22px; }
+  .advantage { gap: 16px; }
+  .advantage__icon { width: 56px; height: 56px; }
+  .advantage__title { font-size: 16px; }
+  .fproduct-specs__row { flex-direction: column; gap: 8px; }
+  .fproduct-specs__label { flex: 0 0 auto; padding-top: 0; }
+  .fproduct-specs__value { padding-top: 0; }
+  .fproduct-gallery__widget {
+    width: auto;
+    max-width: calc(100% - 24px);
+    right: 12px;
+    top: 12px;
+  }
+  .fproduct-gallery__widget-text { width: auto; flex: 1 1 auto; }
+  .related { padding: 40px 0; }
+  .related--projects { padding-bottom: 56px; }
+  .related__grid--3 { grid-template-columns: 1fr; gap: 24px; }
+  .related__header { flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 24px; }
+  .related__title { font-size: 22px; }
+  .brand-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .brand-card__logo { height: 100px; }
+  .project-card__brand { width: 96px; height: 44px; left: 12px; bottom: 12px; }
+  .project-card__title { font-size: 18px; }
+}

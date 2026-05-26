@@ -1,0 +1,484 @@
+/* ===== Page: Project (ЖК Knight Bridge - Glamour) =====
+   Figma node 2:1537 — 1 к 1
+   Main: Info 542 + Photos 770 (gap 32, but Figma has 1343 wide, photo block aligned)
+   Info gap 80 (Details / Appliances)
+   Details gap 40 (Title 542w → Description → Specs)
+   Title row: text 427w (name 40 Black + date 14 muted) + 86×86 brand-logo
+   Description: title bottom-border / body 14 muted / right-aligned link
+   Specs: 5 rows label 108w + value, 14 px, dividers
+   Appliances: H2 28 Black / 3 cards 162w with 86h white logo box (Smeg / Elica / Hermes)
+   Photos: 3 stacked 770×479 gap 12 + Show more button
+   Other projects: H2 28 Black / 3 cards 428w (1 tall 359, 2 normal 335) with brand badge bottom-left
+   News: H2 28 Black / 2 cards 656w with image 256h + date + title 20 + excerpt
+*/
+
+/* --- Top --- */
+.proj-top {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.proj-top__back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  transition: background 0.15s ease;
+}
+.proj-top__back:hover { background: rgba(255, 255, 255, 0.08); }
+
+.proj-top__crumbs {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+.proj-top__crumbs a { color: rgba(255, 255, 255, 0.5); transition: color 0.15s ease; }
+.proj-top__crumbs a:hover { color: #fff; }
+.proj-top__crumbs .sep { margin: 0 8px; }
+.proj-top__crumbs .current {
+  color: #fff;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+/* --- Main grid --- */
+.proj-main {
+  display: grid;
+  grid-template-columns: 542px 1fr;
+  gap: 32px;
+  padding: 32px 0 80px;
+}
+
+.proj-info {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.proj-details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* === Title === */
+.proj-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  width: 100%;
+}
+
+.proj-title__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.proj-title__name {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.proj-title__date {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.proj-title__brand-logo {
+  width: 86px;
+  height: 86px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px;
+  overflow: hidden;
+  display: block;
+}
+.proj-title__brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+/* === Section === */
+.proj-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.proj-section__title {
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.proj-section__body {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+}
+.proj-section__body p { margin: 0; }
+.proj-section__body p + p { margin-top: 8px; }
+
+.proj-section__link {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #fff;
+  text-decoration: underline;
+  align-self: flex-end;
+}
+
+/* === Specs === */
+.proj-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.proj-specs__title {
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.proj-specs__row {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.proj-specs__row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.proj-specs__label {
+  flex: 0 0 108px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.proj-specs__value { color: #fff; }
+
+/* === Appliances === */
+.proj-appliances {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.proj-appliances__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.proj-appliances__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 162px);
+  gap: 28px;
+}
+
+.appliance-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  background: #282828;
+  align-items: center;
+  width: 162px;
+}
+
+.appliance-card__logo {
+  height: 86px;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  overflow: hidden;
+}
+.appliance-card__logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.appliance-card__name {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+}
+
+/* === Gallery === */
+.proj-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: start;
+}
+
+.proj-gallery__main {
+  position: relative;
+  aspect-ratio: 770 / 479;
+  background: #282828;
+  overflow: hidden;
+}
+
+.proj-gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.proj-gallery__more {
+  width: 100%;
+  height: 56px;
+  margin-top: 28px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.proj-gallery__more:hover { background: rgba(255, 255, 255, 0.08); }
+
+/* === Related === */
+.related {
+  padding: 56px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.related--news { padding-bottom: 80px; }
+
+.related__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.related__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.related__link {
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+  transition: color 0.15s ease;
+}
+.related__link:hover { color: #fff; }
+
+.related__grid {
+  display: grid;
+  gap: 32px 28px;
+}
+.related__grid--3 { grid-template-columns: repeat(3, 1fr); }
+.related__grid--2 { grid-template-columns: repeat(2, 1fr); }
+
+/* === Project card (other projects) === */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.25s ease;
+}
+.project-card:hover { transform: translateY(-2px); }
+
+.project-card__media {
+  position: relative;
+  display: block;
+  aspect-ratio: 428 / 287;
+  overflow: hidden;
+  background: #282828;
+}
+.project-card__media--tall { aspect-ratio: 428 / 311; }
+
+.project-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.project-card:hover .project-card__img { transform: scale(1.02); }
+
+.project-card__brand {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  width: 123px;
+  height: 56px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 4px;
+  z-index: 2;
+  overflow: hidden;
+  display: block;
+}
+.project-card__brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-card__date {
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.project-card__title {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.project-card__title:hover { color: rgba(255, 255, 255, 0.8); }
+
+/* === News card === */
+.news-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.25s ease;
+}
+.news-card:hover { transform: translateY(-2px); }
+
+.news-card__media {
+  display: block;
+  aspect-ratio: 656 / 256;
+  overflow: hidden;
+  background: #282828;
+}
+.news-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.news-card:hover .news-card__img { transform: scale(1.02); }
+
+.news-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.news-card__date {
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.news-card__title {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.news-card__title:hover { color: rgba(255, 255, 255, 0.8); }
+
+.news-card__excerpt {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* === Tablet === */
+@media (max-width: 1279px) {
+  .proj-main { grid-template-columns: 460px 1fr; }
+}
+
+@media (max-width: 1023px) {
+  .proj-main { grid-template-columns: 1fr; gap: 24px; padding-bottom: 56px; }
+  .proj-info { gap: 56px; }
+  .proj-appliances__grid { grid-template-columns: repeat(3, 1fr); }
+  .appliance-card { width: 100%; }
+  .related__grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .related__title { font-size: 24px; }
+}
+
+/* === Mobile === */
+@media (max-width: 639px) {
+  .proj-top { padding: 16px 0; }
+  .proj-title { gap: 16px; }
+  .proj-title__name { font-size: 28px; }
+  .proj-title__brand-logo { width: 64px; height: 64px; }
+  .proj-appliances__title { font-size: 22px; }
+  .proj-appliances__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .related { padding: 40px 0; }
+  .related--news { padding-bottom: 56px; }
+  .related__grid--3,
+  .related__grid--2 { grid-template-columns: 1fr; gap: 24px; }
+  .related__header { flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 24px; }
+  .related__title { font-size: 22px; }
+  .project-card__brand { width: 96px; height: 44px; left: 12px; bottom: 12px; }
+  .project-card__title { font-size: 18px; }
+  .news-card__title { font-size: 18px; }
+}

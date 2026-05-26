@@ -1,0 +1,562 @@
+/* ===== Page: Карточка кухни «в наличии» (Product Available) =====
+   Figma: Info 542w, gap 80 между Details и Appliances
+   Details: gap 40 (Title → Description → Button → Characteristics)
+   Title: gap 28 (Text | Brand Logo 86×86)
+   Text: gap 24 → внутренний gap 16 (name+price)
+   Description / Characteristics: section title 14 Medium с нижней рамкой,
+   тело 14 Regular, ссылка 14 underline
+   Project Card: 428×~335-359, изображение flex с brand badge bottom-left
+*/
+
+/* --- Breadcrumbs --- */
+.product-top {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.product-top__back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  transition: background 0.15s ease;
+}
+.product-top__back:hover { background: var(--bg-elev); }
+
+.product-top__crumbs {
+  font-size: var(--fs-14);
+  line-height: var(--lh-21);
+  color: var(--text-muted);
+}
+.product-top__crumbs a { color: var(--text-muted); transition: color 0.15s ease; }
+.product-top__crumbs a:hover { color: var(--text); }
+.product-top__crumbs .sep { margin: 0 8px; }
+.product-top__crumbs .current {
+  color: var(--text);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+/* --- Main: Info 542px + Gallery 770px --- */
+.product-main {
+  display: grid;
+  grid-template-columns: 542px 1fr;
+  gap: 32px;
+  padding: 32px 0 80px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* === Title row: text + 86×86 brand logo === */
+.product-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  width: 100%;
+}
+
+.product-title__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.product-title__head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.product-title__name {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.product-title__prices {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.product-title__price {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #fff;
+}
+
+.product-title__price--old {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: line-through;
+}
+
+/* "Официальный дилер" pill */
+.product-title__dealer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #ff390e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  border-radius: 4px;
+}
+.product-title__dealer-icon { flex-shrink: 0; }
+
+/* 86×86 white box, p-4, image fills via object-cover */
+.product-title__brand-logo {
+  width: 86px;
+  height: 86px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px;
+  overflow: hidden;
+  display: block;
+}
+.product-title__brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+/* === Section (Description / Characteristics) === */
+.product-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.product-section__title {
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.product-section__body {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+}
+.product-section__body p + p { margin-top: 8px; }
+
+.product-section__link {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #fff;
+  text-decoration: underline;
+  align-self: flex-end;
+}
+
+/* === Specifications (label 108px + value) === */
+.product-specs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.product-specs__row {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.product-specs__row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.product-specs__label {
+  flex: 0 0 108px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.product-specs__value { color: #fff; }
+
+/* === CTA button (full width 56px, #ff390e) === */
+.product-cta {
+  width: 100%;
+  height: 56px;
+  background: #ff390e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.product-cta:hover { background: #e63110; }
+.product-cta:active { transform: translateY(1px); }
+
+/* === Appliances === */
+.product-appliances {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.product-appliances__title {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.product-appliances__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 162px);
+  gap: 28px;
+}
+
+.appliance-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  background: #282828;
+  border-radius: 0;
+  align-items: center;
+  width: 162px;
+}
+
+.appliance-card__logo {
+  height: 86px;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  overflow: hidden;
+}
+.appliance-card__logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.appliance-card__name {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+}
+
+/* === Right column: gallery 770×479 stack === */
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-self: start;
+}
+
+.product-gallery__main {
+  position: relative;
+  aspect-ratio: 770 / 479;
+  background: var(--bg-elev);
+  border-radius: 0;
+  overflow: hidden;
+}
+.product-gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Widget overlay: white pill at top-right */
+.product-gallery__widget {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 16px 8px 8px;
+  background: #fff;
+  border-radius: 8px;
+  width: 302px;
+  color: #4c4c4c;
+  text-decoration: none;
+  z-index: 2;
+  transition: opacity 0.15s ease;
+}
+.product-gallery__widget:hover { opacity: 0.92; }
+
+.product-gallery__widget-preview {
+  width: 97px;
+  height: 60px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.product-gallery__widget-text {
+  font-size: 14px;
+  line-height: 1.5;
+  width: 173px;
+}
+.product-gallery__widget-text strong {
+  font-weight: 500;
+  color: #000;
+}
+
+/* "Показать ещё" outline button */
+.product-gallery__more {
+  width: 100%;
+  height: 56px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.product-gallery__more:hover { background: rgba(255, 255, 255, 0.08); }
+
+/* === Related sections === */
+.related {
+  padding: 56px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.related--projects { padding-bottom: 80px; }
+
+.related__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.related__title {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.related__link {
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+  transition: color 0.15s ease;
+}
+.related__link:hover { color: #fff; }
+
+.related__grid {
+  display: grid;
+  gap: 32px 28px;
+}
+.related__grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+/* === Product Card (kitchens — 3 col) === */
+.related-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.25s ease;
+}
+.related-card:hover { transform: translateY(-2px); }
+
+.related-card__img-wrap {
+  aspect-ratio: 428 / 270;
+  background: var(--bg-elev);
+  overflow: hidden;
+}
+.related-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.related-card:hover .related-card__img { transform: scale(1.02); }
+
+.related-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.related-card__name {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+}
+.related-card__brand {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+.related-card__price {
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* === Project Card (proекты — 3 col, brand badge bottom-left) === */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.25s ease;
+}
+.project-card:hover { transform: translateY(-2px); }
+
+.project-card__media {
+  position: relative;
+  display: block;
+  aspect-ratio: 428 / 287;
+  overflow: hidden;
+  background: var(--bg-elev);
+}
+.project-card__media--tall { aspect-ratio: 428 / 311; }
+
+.project-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.project-card:hover .project-card__img { transform: scale(1.02); }
+
+/* 123×56 white badge with brand logo, bottom-left, p-4, rounded-4 */
+.project-card__brand {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  width: 123px;
+  height: 56px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 4px;
+  z-index: 2;
+  overflow: hidden;
+  display: block;
+}
+.project-card__brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-card__date {
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.project-card__title {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.project-card__title:hover { color: rgba(255, 255, 255, 0.8); }
+
+/* === Tablet === */
+@media (max-width: 1279px) {
+  .product-main { grid-template-columns: 460px 1fr; }
+}
+
+@media (max-width: 1023px) {
+  .product-main { grid-template-columns: 1fr; gap: 24px; padding-bottom: 56px; }
+  .product-info { gap: 56px; }
+  .related__grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .related__title { font-size: 24px; }
+  .product-appliances__grid { grid-template-columns: repeat(3, 1fr); }
+  .appliance-card { width: 100%; }
+}
+
+/* === Mobile === */
+@media (max-width: 639px) {
+  .product-top { padding: 16px 0; }
+  .product-title__name { font-size: 28px; }
+  .product-title { gap: 16px; }
+  .product-title__brand-logo { width: 64px; height: 64px; }
+  .product-appliances__title { font-size: 22px; }
+  .product-appliances__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .appliance-card { width: 100%; }
+  .product-gallery__widget {
+    width: auto;
+    max-width: calc(100% - 24px);
+    right: 12px;
+    top: 12px;
+  }
+  .product-gallery__widget-text { width: auto; flex: 1 1 auto; }
+  .related { padding: 40px 0; }
+  .related--projects { padding-bottom: 56px; }
+  .related__grid--3 { grid-template-columns: 1fr; gap: 24px; }
+  .related__header { flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 24px; }
+  .related__title { font-size: 22px; }
+  .project-card__brand { width: 96px; height: 44px; left: 12px; bottom: 12px; }
+  .project-card__title { font-size: 18px; }
+}

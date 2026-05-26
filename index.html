@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeCucine — макет редизайна</title>
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800,900&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #171717;
+      color: #fff;
+      font-family: 'Switzer', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .wrap {
+      width: 100%;
+      max-width: 720px;
+    }
+    h1 {
+      font-size: 40px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+    h1 sup { font-size: 0.5em; vertical-align: super; }
+    .sub {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .card {
+      display: block;
+      padding: 24px;
+      background: #282828;
+      border-radius: 4px;
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .card:hover { background: #353535; }
+    .card__title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .card__desc {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.4;
+    }
+    .footer {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #282828;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+    @media (max-width: 539px) {
+      .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>LeCucine<sup>®</sup></h1>
+    <p class="sub">Макет редизайна — 6 страниц</p>
+
+    <div class="grid">
+      <a class="card" href="./pages/in-stock/index.html">
+        <div class="card__title">В наличии</div>
+        <div class="card__desc">Каталог с фильтрами и сеткой карточек</div>
+      </a>
+
+      <a class="card" href="./pages/product-available/index.html">
+        <div class="card__title">Карточка кухни «в наличии»</div>
+        <div class="card__desc">Цена в €, галерея с фото и стрелками</div>
+      </a>
+
+      <a class="card" href="./pages/product/index.html">
+        <div class="card__title">Фабричная кухня</div>
+        <div class="card__desc">Цена «от X ₽/м.п.», теги, преимущества</div>
+      </a>
+
+      <a class="card" href="./pages/project/index.html">
+        <div class="card__title">Выполненный проект</div>
+        <div class="card__desc">ЖК Knight Bridge — Glamour, стэк фото</div>
+      </a>
+
+      <a class="card" href="./pages/factory/index.html">
+        <div class="card__title">Страница фабрики</div>
+        <div class="card__desc">Old Line — описание + каталог моделей</div>
+      </a>
+
+      <a class="card" href="./pages/news/index.html">
+        <div class="card__title">Новости</div>
+        <div class="card__desc">Грид новостных карточек</div>
+      </a>
+    </div>
+
+    <div class="footer">
+      Чтобы навигация работала между страницами, открой через локальный сервер:<br />
+      <code style="color:#fff;">python -m http.server 8080</code> в этой папке, потом <code style="color:#fff;">http://localhost:8080/</code>
+    </div>
+  </div>
+</body>
+</html>

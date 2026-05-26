@@ -1,0 +1,379 @@
+/* ===== Page: Catalog Available (Кухни в наличии) =====
+   Figma node 1:342 — 1 к 1
+   Title row 1340w (text 541w left + breadcrumbs right)
+   Description 655w right column with link
+   Filters 6 cells × 428w (3 col), gap 32×28
+   Actions row: "Сбросить фильтры" left + "Показать N моделей" 428w button right
+   Products 2 col × 656w × 512h, gap 40×28
+   Pagination + Show more 428×56
+*/
+
+/* --- Title + breadcrumbs --- */
+.catalog-head {
+  padding: 64px 0 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+}
+
+.catalog-head__title {
+  flex: 0 0 541px;
+  max-width: 541px;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.catalog-head__crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: none;
+}
+.catalog-head__crumbs span:first-child { text-transform: uppercase; }
+.catalog-head__crumbs .sep { color: rgba(255, 255, 255, 0.5); }
+.catalog-head__crumbs .current {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* --- Description (right column under title) --- */
+.catalog-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+  width: 655px;
+  max-width: 100%;
+  margin-left: auto;
+  padding-bottom: 40px;
+}
+.catalog-desc p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+}
+.catalog-desc__link {
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+  transition: color 0.15s ease;
+}
+.catalog-desc__link:hover { color: #fff; }
+
+/* --- Filters --- */
+.filters { padding: 0 0 20px; }
+
+.filters__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 28px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.filter__label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.filter__control {
+  position: relative;
+  height: 56px;
+  background: #282828;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  transition: background 0.15s ease;
+}
+.filter__control:hover { background: #303030; }
+
+.filter__value {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.filter__value-muted { color: rgba(255, 255, 255, 0.5); margin-left: 8px; }
+
+.filter__chevron {
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.filter__select {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* --- Actions row: Reset / Submit button --- */
+.filters__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.filters__reset {
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+  transition: color 0.15s ease;
+}
+.filters__reset:hover { color: #fff; }
+
+.filters__submit {
+  width: 428px;
+  height: 56px;
+  background: #ff390e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.filters__submit:hover { background: #e63110; }
+.filters__submit:active { transform: translateY(1px); }
+
+/* --- Divider --- */
+.catalog-divider {
+  width: 100%;
+  height: 1px;
+  margin: 24px 0 40px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Products grid 2×N (656w × 512h) --- */
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 28px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.product__media {
+  position: relative;
+  display: block;
+  aspect-ratio: 656 / 411;
+  overflow: hidden;
+  background: #282828;
+}
+.product__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.product:hover .product__img { transform: scale(1.02); }
+
+/* "Новинка" pill (#ff602e) — top-left */
+.product__label--new {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  background: #ff602e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  z-index: 2;
+}
+
+/* "Официальный дилер" full-width ribbon (#ff390e) — bottom */
+.product__label--dealer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px;
+  background: #ff390e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  z-index: 2;
+}
+.product__label--dealer svg { flex-shrink: 0; }
+
+/* Body — name 20 Regular / brand 14 muted / price 16 + old 14 muted strikethrough */
+.product__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product__name {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #fff;
+}
+
+.product__brand {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.product__price-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+.product__price {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+}
+.product__price-old {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: line-through;
+}
+
+/* --- Pagination row --- */
+.pagination-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 56px 0 80px;
+  gap: 24px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+}
+.pagination__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 19px;
+  color: #fff;
+  transition: opacity 0.15s ease;
+}
+.pagination__btn:hover { opacity: 0.7; }
+
+.pagination__page {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+  transition: color 0.15s ease;
+}
+.pagination__page:hover { color: rgba(255, 255, 255, 0.7); }
+.pagination__page.is-active { color: #ff602e; }
+
+.pagination__dots {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.show-more {
+  width: 428px;
+  height: 56px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.show-more:hover { background: rgba(255, 255, 255, 0.08); }
+
+/* === Tablet === */
+@media (max-width: 1279px) {
+  .filters__submit { width: 320px; }
+  .show-more { width: 320px; }
+}
+
+@media (max-width: 1023px) {
+  .catalog-head { flex-direction: column; gap: 16px; padding-top: 40px; }
+  .catalog-head__title { flex: 1 1 auto; max-width: 100%; font-size: 32px; }
+  .catalog-desc { width: 100%; align-items: flex-start; }
+  .filters__grid { grid-template-columns: repeat(2, 1fr); }
+  .filters__actions { flex-direction: column; align-items: stretch; gap: 16px; }
+  .filters__submit { width: 100%; }
+  .filters__reset { text-align: center; }
+  .products { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; }
+  .pagination-row { flex-direction: column-reverse; align-items: stretch; padding: 40px 0 56px; }
+  .show-more { width: 100%; }
+  .pagination { justify-content: center; }
+}
+
+/* === Mobile === */
+@media (max-width: 639px) {
+  .catalog-head { padding-top: 24px; }
+  .catalog-head__title { font-size: 28px; }
+  .filters { padding-bottom: 12px; }
+  .filters__grid { grid-template-columns: 1fr; gap: 16px; }
+  .filter__control { padding: 10px 14px; height: 52px; }
+  .filter__value { font-size: 15px; }
+  .catalog-divider { margin: 16px 0 28px; }
+  .products { grid-template-columns: 1fr; gap: 28px; }
+  .product__name { font-size: 18px; }
+  .pagination-row { padding: 32px 0 40px; }
+  .pagination { flex-wrap: wrap; gap: 12px; }
+  .pagination__page,
+  .pagination__dots { font-size: 18px; }
+}
