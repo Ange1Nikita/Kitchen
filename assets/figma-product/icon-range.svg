@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 60 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Union" style="mix-blend-mode:exclusion">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19 12V0H41V12H60V21H58L53 24H7L2 21H0V12H19ZM20 1H40V12H20V1ZM1 13V20H59V13H1ZM4 21H56L53 23H7L4 21Z" fill="var(--fill-0, white)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M42 44V49H18V44H42ZM19 45H24V48H19V45ZM25 45H35V48H25V45ZM41 48H36V45H41V48Z" fill="var(--fill-0, white)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15 53H45V56H15V53ZM16 54H44V55H16V54Z" fill="var(--fill-0, white)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9 84H51V42H9V84ZM50 50H10V43H50V50ZM10 51H50V83H10V51Z" fill="var(--fill-0, white)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M48 36H12L9 40H51L48 36ZM13 37L11 39H49L47 37H13Z" fill="var(--fill-0, white)"/>
+</g>
+</svg>
